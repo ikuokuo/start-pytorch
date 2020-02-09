@@ -21,11 +21,12 @@ Basic,
 # Mirror
 Ubuntu: https://mirror.tuna.tsinghua.edu.cn/help/ubuntu/
 Anaconda: https://mirror.tuna.tsinghua.edu.cn/help/anaconda/
+pypi: https://mirrors.tuna.tsinghua.edu.cn/help/pypi/
 
 # Parallel Tools fix for Ubuntu 20.04, 19.04, 19.10, 18.04
 https://gist.github.com/mag911/1a5583a766467d6023584d738cee0d98
 -->
 
-Research,
+## Research
 
-* [Detectron2](https://github.com/facebookresearch/detectron2)
+* [Detectron2](research/detectron2/README.md)
