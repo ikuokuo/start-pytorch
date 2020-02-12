@@ -14,10 +14,12 @@ Basic,
   * Anaconda3-2019.10-Linux-x86_64.sh
   * https://www.anaconda.com/distribution/
 * PyTorch (Stable 1.4)
-  * `conda install pytorch torchvision cpuonly -c pytorch`
+  * `conda install pytorch torchvision cudatoolkit=10.1 -c pytorch`
   * https://pytorch.org/get-started/
 
 <!--
+conda install pytorch torchvision cpuonly -c pytorch
+
 # Mirror
 Ubuntu: https://mirror.tuna.tsinghua.edu.cn/help/ubuntu/
 Anaconda: https://mirror.tuna.tsinghua.edu.cn/help/anaconda/
