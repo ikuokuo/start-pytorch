@@ -38,9 +38,13 @@ def plot_image(
   if boxes is not None:
     if image.dtype != torch.uint8:
       image = torchvision.transforms.ConvertImageDtype(torch.uint8)(image)
+    draw_labels = None
+    draw_colors = None
+    if labels is not None:
+      draw_labels = [lb_names[i] for i in labels] if lb_names is not None else None
+      draw_colors = [lb_colors[i] for i in labels] if lb_colors is not None else None
     res = torchvision.utils.draw_bounding_boxes(image, boxes,
-      labels=[lb_names[i] for i in labels] if labels is not None else None,
-      colors=[lb_colors[i] for i in labels] if labels is not None else None)
+      labels=draw_labels, colors=draw_colors)
   else:
     res = image
 
