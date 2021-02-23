@@ -50,3 +50,7 @@ pip install -r requirements.txt
 ## Tutorials
 
 - [Custom Dataset](docs/torch/custom_dataset.md)
+
+torchvision:
+
+- [Inference with a Pretrained Model](docs/torchvision/inference_with_a_pretrained_model.md)

@@ -25,6 +25,12 @@ COCO_INSTANCE_CATEGORY_NAMES = [
 ]
 
 
+def test_hub(force_reload=False):
+  entrypoints = torch.hub.list('pytorch/vision', force_reload=force_reload)
+  print(entrypoints)
+  print(torch.hub.help('pytorch/vision', 'resnet18', force_reload=force_reload))
+
+
 def test_fasterrcnn(image='data/bicycle.jpg', device=None, score=0.9):
   if device is None:
     device = torch.device('cuda') if torch.cuda.is_available() else torch.device('cpu')
@@ -35,7 +41,6 @@ def test_fasterrcnn(image='data/bicycle.jpg', device=None, score=0.9):
   print(model)
 
   model.to(device)
-  model.eval()
 
   # image
 
@@ -44,6 +49,8 @@ def test_fasterrcnn(image='data/bicycle.jpg', device=None, score=0.9):
   images = [img.to(device)]
 
   # inference
+
+  model.eval()
 
   predictions = model(images)
   pred = predictions[0]
@@ -66,4 +73,6 @@ def test_fasterrcnn(image='data/bicycle.jpg', device=None, score=0.9):
 
 
 if __name__ == '__main__':
+  test_hub()
+  print()
   test_fasterrcnn()
