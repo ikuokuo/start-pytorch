@@ -26,26 +26,36 @@ COCO_INSTANCE_CATEGORY_NAMES = [
 
 
 def test_fasterrcnn(image='data/bicycle.jpg', device=None, score=0.9):
-  model = torchvision.models.detection.fasterrcnn_resnet50_fpn(pretrained=True)
-  print(model)
-
   if device is None:
     device = torch.device('cuda') if torch.cuda.is_available() else torch.device('cpu')
 
-  img = Image.open(image).convert("RGB")
-  img = torchvision.transforms.ToTensor()(img)
+  # model
+
+  model = torchvision.models.detection.fasterrcnn_resnet50_fpn(pretrained=True)
+  print(model)
 
   model.to(device)
   model.eval()
 
-  prediction = model([img.to(device)])[0]
-  print(prediction)
+  # image
 
-  scores = prediction['scores']
+  img = Image.open(image).convert("RGB")
+  img = torchvision.transforms.ToTensor()(img)
+  images = [img.to(device)]
+
+  # inference
+
+  predictions = model(images)
+  pred = predictions[0]
+  print(pred)
+
+  # plot
+
+  scores = pred['scores']
   mask = scores >= score
 
-  boxes = prediction['boxes'][mask]
-  labels = prediction['labels'][mask]
+  boxes = pred['boxes'][mask]
+  labels = pred['labels'][mask]
   scores = scores[mask]
 
   lb_names = COCO_INSTANCE_CATEGORY_NAMES
