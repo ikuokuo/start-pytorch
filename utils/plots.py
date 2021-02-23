@@ -32,11 +32,12 @@ def plot_image(
   """
   if not isinstance(image, torch.Tensor):
     image = torchvision.transforms.ToTensor()(image)
-    image = torchvision.transforms.ConvertImageDtype(torch.uint8)(image)
 
   # torchvision >= 0.9.0/nightly
   #  https://github.com/pytorch/vision/blob/master/torchvision/utils.py
   if boxes is not None:
+    if image.dtype != torch.uint8:
+      image = torchvision.transforms.ConvertImageDtype(torch.uint8)(image)
     res = torchvision.utils.draw_bounding_boxes(image, boxes,
       labels=[lb_names[i] for i in labels] if labels is not None else None,
       colors=[lb_colors[i] for i in labels] if labels is not None else None)
