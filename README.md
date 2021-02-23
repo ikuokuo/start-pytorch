@@ -34,3 +34,18 @@ conda install pytorch==1.7.1 torchvision==0.8.2 cudatoolkit=10.2 -c pytorch -y
 ```bash
 conda install pytorch torchvision cudatoolkit=10.2 -c pytorch-nightly -y
 ```
+
+## Preparation
+
+```bash
+conda activate pytorch
+
+git clone https://github.com/ikuokuo/start-pytorch.git
+
+cd start-pytorch
+pip install -r requirements.txt
+```
+
+## Tutorials
+
+- [Custom Dataset](docs/custom_dataset.md)
