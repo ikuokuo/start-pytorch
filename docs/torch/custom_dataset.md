@@ -172,6 +172,11 @@ batch 1, images 64, targets 64
         [  1.6701, 154.9299,  56.8400, 188.3700]]), 'labels': tensor([20, 20, 20, 20, 20, 20, 20])}
 ```
 
+## Sources
+
+- [datasets.py](../../utils/datasets.py)
+- [test_datasets.py](../../tests/test_datasets.py)
+
 ## References
 
 Tutorials:
