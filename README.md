@@ -49,4 +49,4 @@ pip install -r requirements.txt
 
 ## Tutorials
 
-- [Custom Dataset](docs/custom_dataset.md)
+- [Custom Dataset](docs/torch/custom_dataset.md)

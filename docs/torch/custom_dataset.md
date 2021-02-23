@@ -131,7 +131,7 @@ dataset[0]: (<PIL.Image.Image image mode=RGB size=640x480 at 0x7F6F9464ADF0>, {'
 
 Preview:
 
-![](images/draw_boxes.png)
+![](../images/draw_boxes.png)
 
 ## Use DataLoader
 
