@@ -16,6 +16,7 @@ def plot_image(
   labels: Optional[torch.Tensor] = None,
   lb_names: Optional[List[str]] = None,
   lb_colors: Optional[List[Union[str, Tuple[int, int, int]]]] = None,
+  lb_infos: Optional[List[str]] = None,
   save_name: Optional[str] = None,
   show_name: Optional[str] = 'result',
 ) -> torch.Tensor:
@@ -27,6 +28,7 @@ def plot_image(
     labels (Optional[Tensor]): `Int64Tensor[N]`, the class label index for each box.
     lb_names (Optional[List[str]]): All class label names.
     lb_colors (List[Union[str, Tuple[int, int, int]]]): List containing the colors of all class label names.
+    lb_infos (Optional[List[str]]): Infos for given labels.
     save_name (Optional[str]): Save image name.
     show_name (Optional[str]): Show window name.
   """
@@ -43,6 +45,8 @@ def plot_image(
     if labels is not None:
       draw_labels = [lb_names[i] for i in labels] if lb_names is not None else None
       draw_colors = [lb_colors[i] for i in labels] if lb_colors is not None else None
+    if draw_labels and lb_infos:
+      draw_labels = [f'{l} {i}' for l, i in zip(draw_labels, lb_infos)]
     res = torchvision.utils.draw_bounding_boxes(image, boxes,
       labels=draw_labels, colors=draw_colors)
   else:
