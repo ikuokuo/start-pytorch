@@ -49,8 +49,9 @@ pip install -r requirements.txt
 
 ## Tutorials
 
-- [Custom Dataset](docs/torch/custom_dataset.md)
+- [PyTorch Custom Dataset](docs/torch/torch_custom_dataset.md)
 
 torchvision:
 
-- [Inference with a Pretrained Model](docs/torchvision/inference_with_a_pretrained_model.md)
+- [TorchVision Inference with a Pretrained Model](docs/torchvision/torchvision_inference_with_a_pretrained_model.md)
+- [TorchVision Instance Segmentation Finetuning Tutorial](docs/torchvision/finetuning_instance_segmentation/torchvision_finetuning_instance_segmentation.ipynb)

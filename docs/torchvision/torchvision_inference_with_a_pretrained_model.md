@@ -1,4 +1,4 @@
-# torchvision: Inference with a Pretrained Model
+# TorchVision Inference with a Pretrained Model
 
 We will instance a Faster R-CNN pre-trained model in torchvision, and predict the objects for each input image with the model.
 
