@@ -174,7 +174,7 @@ batch 1, images 64, targets 64
 
 ## Sources
 
-- [datasets.py](../../utils/datasets.py)
+- [datasets/yolov5.py](../../utils/datasets/yolov5.py)
 - [test_datasets.py](../../tests/test_datasets.py)
 
 ## References
