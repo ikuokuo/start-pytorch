@@ -3,3 +3,5 @@
 __pycache__/
 result.png
 runs/
+*.pth
+submission.csv
