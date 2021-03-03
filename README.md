@@ -55,6 +55,9 @@ torchvision:
 
 - [TorchVision Inference with a Pretrained Model](docs/torchvision/torchvision_inference_with_a_pretrained_model.md)
 - [TorchVision Object Detection Finetuning Tutorial](docs/torchvision/finetuning_object_detection/torchvision_finetuning_object_detection.ipynb)
+  - Kaggle notebooks about this tutorial 👇
+    - [TorchVision Faster R-CNN Finetuning](https://www.kaggle.com/gocoding/torchvision-faster-r-cnn-finetuning)
+    - [TorchVision Faster R-CNN Inference](https://www.kaggle.com/gocoding/torchvision-faster-r-cnn-inference)
 - [TorchVision Instance Segmentation Finetuning Tutorial](docs/torchvision/finetuning_instance_segmentation/torchvision_finetuning_instance_segmentation.ipynb)
 
 others:
